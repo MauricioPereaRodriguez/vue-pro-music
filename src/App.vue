@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     search () {
-      if (this.searchQuery) { return }
+      if (!this.searchQuery) { return }
 
       trackService.search(this.searchQuery)
         .then(res => {
